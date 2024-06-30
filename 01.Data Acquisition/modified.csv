@@ -1,0 +1,7 @@
+,index,miles_from_home,pct_of_accidents
+0,7,less than 1,23
+1,17,1 to 5,29
+2,20,6 to 10,17
+3,4,11 to 15,8
+4,2,16 to 20,6
+5,-1,over 20,17

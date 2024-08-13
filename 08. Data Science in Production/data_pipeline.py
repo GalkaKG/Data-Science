@@ -14,7 +14,8 @@ class Print(luigi.Task):
         return luigi.LocalTarget("hello.txt")
     
 
-class Read(luigi.Task):
+class Modify(luigi.Task):
+    number = luigi.Parameter(5)
     def requires(self):
         return Print()
     
@@ -30,5 +31,8 @@ class Read(luigi.Task):
         return luigi.LocalTarget("hello-mod.txt")
     
 
-# class Modify(luigi.Task):
-#     number = luigi.Parameter(5)
+class MainTask(luigi.Task):  
+    def requires(self):
+        return Modify()
+    
+  
